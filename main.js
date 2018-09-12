@@ -1,29 +1,25 @@
 getData();
 
+var template;
+
 function getData() {
-    fetch("https://api.myjson.com/bins/8zpvs", {
-    })
-    .then(response => response.json())
-    .then(realData => {
+    fetch("https://api.myjson.com/bins/8zpvs", {})
+        .then(response => response.json())
+        .then(realData => {
 
-        var data = realData;
-        
-        console.log(data);
-        
-        getBooks(data);
-    })
-}
+            var data = realData;
+            console.log(data);
 
-function getBooks(data) {
-    let bookDivs = document.querySelector('#newBook')
-    data.books.forEach(book => {
-        let newBook = document.createElement('div');
-        newBook.classList.add("book");
-        let newImg = document.createElement("IMG");
-        newImg.setAttribute("src", book.cover);
-        newBook.append(newImg);
-        bookDivs.append(newBook);
-        // bookDivs.append(newImg);
-    });
-    
+            //call books
+            let bookDivs = document.querySelector('#newBook')
+            data.books.forEach(book => {
+                template += `<div>
+                        <a class="fancybox" rel="group" href=${book.detail}><img class="book" src=${book.cover} alt="cover" /></a>
+                    </div>`
+
+                // bookDivs.append(template);
+                document.getElementById("newBook").innerHTML = template;
+            });
+
+        })
 }
