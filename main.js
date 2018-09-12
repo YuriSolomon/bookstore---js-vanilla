@@ -22,12 +22,12 @@ function getBooks(data) {
                                 <img class="book" src=${book.cover} alt="cover"/>
 		                    </div>
 		                    <div class="back container">
-                                <h3>${book.title}</h3>
-                                <p>${book.description}</p>
-                                <p>Language: ${book.language}</p>
-                                <a rel="gallery" href=${book.detail} class="swipebox" title="My Caption">
-                                <img class="readMore" src="button-more-info.jpg" alt="cover">
+                                <h3 class="row align-items-center" style="height:80px">${book.title}</h3>
+                                <p class="row" style="height:210px">${book.description}</p>
+                                <a rel="gallery" href=${book.detail} class="swipebox row justify-content-center" style="height:50px" title="My Caption">
+                                    <img class="readMore" src="button-more-info.jpg" alt="cover">
                                 </a>
+                                <p class="row align-items-end" style="height:90px">Language: ${book.language}</p>
 		                    </div>
 	                    </div>
                     </div>

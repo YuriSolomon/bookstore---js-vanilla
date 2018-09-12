@@ -1,8 +1,8 @@
-body { 
+body {
     background: #6c757d !important;
 }
 
-.col-6{
+.col-6 {
     align-self: center;
 }
 
@@ -11,13 +11,16 @@ body {
     width: 280px;
 }
 
-.readMore{
-    justify-self: center;
+.readMore {
     width: 150px;
 }
 
+.row {
+    margin: 0 !important;
+}
+
 .d-flex {
-background-color: #6c757d !important;
+    background-color: #6c757d !important;
 }
 
 /* hover-flip */
