@@ -19,19 +19,19 @@ function getBooks(data) {
                     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 	                    <div class="flipper">
 		                    <div class="front">
-                                <img class="book" src=${book.cover} alt="cover" /></a>
+                                <img class="book" src=${book.cover} alt="cover"/>
 		                    </div>
 		                    <div class="back container">
                                 <h3>${book.title}</h3>
                                 <p>${book.description}</p>
                                 <p>Language: ${book.language}</p>
-                                <a class="fancybox" rel="group" href=${book.detail}>
+                                <a rel="gallery" href=${book.detail} class="swipebox" title="My Caption">
+                                <img class="readMore" src="button-more-info.jpg" alt="cover">
+                                </a>
 		                    </div>
 	                    </div>
                     </div>
                     `
-
         document.getElementById("newBook").innerHTML = template;
     });
-
 }

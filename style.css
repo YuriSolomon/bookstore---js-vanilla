@@ -6,22 +6,14 @@ body {
     align-self: center;
 }
 
-.col-6 a{
-    text-decoration: none;
-    color: black;
-}
-
-.col-6 a h1{
-    font-weight: bold;
-}
-
-.col-6 a h2{
-    font-size: 230%;
-}
-
 .book {
     height: 435px;
     width: 280px;
+}
+
+.readMore{
+    justify-self: center;
+    width: 150px;
 }
 
 .d-flex {
@@ -76,4 +68,5 @@ background-color: #6c757d !important;
 .back {
     transform: rotateY(180deg);
     background-color: #474d52;
+    color: white;
 }
