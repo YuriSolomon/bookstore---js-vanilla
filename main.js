@@ -35,3 +35,21 @@ function getBooks(data) {
         document.getElementById("newBook").innerHTML = template;
     });
 }
+
+function search() {
+
+    let searchValue = document.getElementById("myInput");
+    let allBooks = Array.from(document.getElementsByClassName("flip-container"));
+
+    allBooks.forEach(item => {
+        var match = item.innerHTML.toUpperCase().includes(searchValue.value.toUpperCase());
+
+        if (match) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+        
+    })
+    console.log(searchValue.value);
+}
