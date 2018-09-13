@@ -9,7 +9,7 @@
         rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../../../swipebox-master/src/css/swipebox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/css/swipebox.css" />
     <title>Book Store</title>
 </head>
 
@@ -28,28 +28,30 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="../../../swipebox-master/lib/jquery-2.1.0.min.js"></script>
-    <script src="../../../swipebox-master/src/js/jquery.swipebox.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js" integrity="sha256-oYqpLeqZe9cetUDV+TFiBZHp3uJ+X4F5eLs4W6uSTSE="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.swipebox/1.4.4/js/jquery.swipebox.js"></script>
 
     <script type="text/javascript">
-        ;( function( $ ) {
-        
-            $( '.swipebox' ).swipebox( {
-                useCSS : true, // false will force the use of jQuery for animations
-                useSVG : true, // false to force the use of png for buttons
-                initialIndexOnArray : 0, // which image index to init when a array is passed
-                hideCloseButtonOnMobile : false, // true will hide the close button on mobile devices
-                removeBarsOnMobile : true, // false will show top bar on mobile devices
-                hideBarsDelay : 3000, // delay before hiding bars on desktop
-                videoMaxWidth : 1140, // videos max width
-                beforeOpen: function() {}, // called before opening
+        ;
+        (function ($) {
+
+            $('.swipebox').swipebox({
+                useCSS: true, // false will force the use of jQuery for animations
+                useSVG: true, // false to force the use of png for buttons
+                initialIndexOnArray: 0, // which image index to init when a array is passed
+                hideCloseButtonOnMobile: false, // true will hide the close button on mobile devices
+                removeBarsOnMobile: true, // false will show top bar on mobile devices
+                hideBarsDelay: 3000, // delay before hiding bars on desktop
+                videoMaxWidth: 1140, // videos max width
+                beforeOpen: function () {}, // called before opening
                 afterOpen: null, // called after opening
-                afterClose: function() {}, // called after closing
+                afterClose: function () {}, // called after closing
                 loopAtEnd: true // true will return to the first image after the last image is reached
-            } );
-        
-        } )( jQuery );
-        </script>
+            });
+
+        })(jQuery);
+    </script>
 
 </body>
 
